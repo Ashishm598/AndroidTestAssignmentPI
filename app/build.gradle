@@ -49,6 +49,9 @@ dependencies {
     // MultiDex
     implementation 'com.android.support:multidex:1.0.3'
 
+    // greenRobot Essentials
+    implementation 'org.greenrobot:essentials:3.0.0-RC1'
+
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.core:core-ktx:$kotlinExtension"

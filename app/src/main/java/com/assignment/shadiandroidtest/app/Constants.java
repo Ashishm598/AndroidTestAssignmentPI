@@ -6,4 +6,6 @@ public interface Constants {
 
     String API_URL = BASE_URL + "api/";
 
+    int RESULT_LIMIT = 10;
+
 }

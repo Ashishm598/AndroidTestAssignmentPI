@@ -6,7 +6,13 @@ import android.net.NetworkInfo;
 
 public class NetworkUtil {
 
-    public static boolean isConnectingToInternet(Context context) {
+    private Context context;
+
+    public NetworkUtil(Context context) {
+        this.context = context;
+    }
+
+    public boolean isConnectingToInternet() {
         ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivity != null) {
             NetworkInfo[] info = connectivity.getAllNetworkInfo();
