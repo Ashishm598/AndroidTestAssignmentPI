@@ -15,7 +15,7 @@ public class MainApplication extends Application {
 
     private static Context appContext;
 
-    public static final String LOG_TAG = "tm-tag";
+    public static final String LOG_TAG = "custom-tag";
 
     private static BoxStore boxStore;
 
