@@ -1,4 +1,4 @@
-package com.assignment.shadiandroidtest.entities
+package com.assignment.shadiandroidtest.entities.user
 
 data class Coordinates(
     var latitude: String? = null,

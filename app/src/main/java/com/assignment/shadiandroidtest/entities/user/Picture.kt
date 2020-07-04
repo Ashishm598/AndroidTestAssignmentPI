@@ -1,4 +1,4 @@
-package com.assignment.shadiandroidtest.entities
+package com.assignment.shadiandroidtest.entities.user
 
 data class Picture(
     var large: String? = null,

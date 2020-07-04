@@ -5,7 +5,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.assignment.shadiandroidtest.BuildConfig;
-import com.assignment.shadiandroidtest.entities.MyObjectBox;
+import com.assignment.shadiandroidtest.entities.user.MyObjectBox;
 import com.assignment.shadiandroidtest.services.MainService;
 
 import io.objectbox.BoxStore;
