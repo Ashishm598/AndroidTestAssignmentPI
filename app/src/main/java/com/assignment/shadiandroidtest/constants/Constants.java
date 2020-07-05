@@ -1,4 +1,4 @@
-package com.assignment.shadiandroidtest.app;
+package com.assignment.shadiandroidtest.constants;
 
 public interface Constants {
 

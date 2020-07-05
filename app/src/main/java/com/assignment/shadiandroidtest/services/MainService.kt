@@ -1,8 +1,7 @@
 package com.assignment.shadiandroidtest.services
 
-import com.assignment.shadiandroidtest.app.Constants
+import com.assignment.shadiandroidtest.constants.Constants
 import com.assignment.shadiandroidtest.models.MainResponse
-import io.reactivex.Flowable
 import io.reactivex.Observable
 import retrofit2.Response
 import retrofit2.http.GET

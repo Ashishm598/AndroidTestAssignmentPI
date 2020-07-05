@@ -27,5 +27,7 @@ data class UserEntity(
     @Convert(converter = PictureToStringConverter::class, dbType = String::class)
     var picture: Picture? = null,
     @Convert(converter = RegisteredToStringConverter::class, dbType = String::class)
-    var registered: Registered? = null
+    var registered: Registered? = null,
+    @Convert(converter = UserStatusToStringConverter::class, dbType = String::class)
+    var userStatus: UserStatus = UserStatus()
 )

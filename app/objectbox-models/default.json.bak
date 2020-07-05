@@ -4,40 +4,95 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "1:5863430547004428669",
-      "lastPropertyId": "4:5086945697847173653",
-      "name": "MainResponse",
+      "id": "2:641523088845620890",
+      "lastPropertyId": "13:2335008433475924446",
+      "name": "UserEntity",
       "properties": [
         {
-          "id": "1:866942638244207055",
-          "name": "id",
+          "id": "1:6936436633639202282",
+          "name": "userId",
           "type": 6,
           "flags": 1
         },
         {
-          "id": "2:5970746890304541777",
-          "name": "info",
+          "id": "2:3525841818383660093",
+          "name": "cell",
           "type": 9
         },
         {
-          "id": "4:5086945697847173653",
-          "name": "users",
+          "id": "3:6002252774438819994",
+          "name": "dob",
+          "type": 9
+        },
+        {
+          "id": "4:6418847565616802466",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "5:4422812441401263364",
+          "name": "gender",
+          "type": 9
+        },
+        {
+          "id": "6:7235419212294032801",
+          "name": "id",
+          "type": 9
+        },
+        {
+          "id": "7:8556328829933110132",
+          "name": "location",
+          "type": 9
+        },
+        {
+          "id": "8:4063142150591236538",
+          "name": "login",
+          "type": 9
+        },
+        {
+          "id": "9:5762377026149525413",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "10:4274473858415399700",
+          "name": "nat",
+          "type": 9
+        },
+        {
+          "id": "11:3217418736862013469",
+          "name": "phone",
+          "type": 9
+        },
+        {
+          "id": "12:4677307685588272993",
+          "name": "picture",
+          "type": 9
+        },
+        {
+          "id": "13:2335008433475924446",
+          "name": "registered",
           "type": 9
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "1:5863430547004428669",
+  "lastEntityId": "2:641523088845620890",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
   "modelVersionParserMinimum": 5,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    5863430547004428669
+  ],
   "retiredIndexUids": [],
   "retiredPropertyUids": [
-    8198274820070296096
+    8198274820070296096,
+    866942638244207055,
+    5970746890304541777,
+    5086945697847173653
   ],
   "retiredRelationUids": [],
   "version": 1
