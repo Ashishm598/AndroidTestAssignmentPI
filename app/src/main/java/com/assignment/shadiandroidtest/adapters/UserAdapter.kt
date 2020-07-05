@@ -37,8 +37,19 @@ class UserAdapter(private val context: Context, private val userData: List<UserE
         GlideUtil.loadImage(currentUser.picture?.large, holder.binding.civPersonProfilePic, context)
     }
 
-    class UserViewHolder(val binding: RowItemUserListBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class UserViewHolder(val binding: RowItemUserListBinding) : RecyclerView.ViewHolder(binding.root) {
+        init {
+            // Accept
+            binding.tvBtnAccept.setOnClickListener {
+
+            }
+
+            // Decline
+            binding.tvBtnDecline.setOnClickListener {
+
+            }
+
+        }
 
     }
 }
