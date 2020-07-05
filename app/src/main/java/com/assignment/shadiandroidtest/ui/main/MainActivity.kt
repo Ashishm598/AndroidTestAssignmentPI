@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity(), MainActivityContractMVP.View {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        injectDependency()
 
         val networkUtil = NetworkUtil(this)
         val sweetDialogUtil = SweetDialogUtil(this)
