@@ -3,7 +3,9 @@ package com.assignment.shadiandroidtest.ui.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.TorrMonk.extension.log
+import com.assignment.shadiandroidtest.adapters.UserAdapter
 import com.assignment.shadiandroidtest.app.Constants
 import com.assignment.shadiandroidtest.app.MainApplication
 import com.assignment.shadiandroidtest.databinding.ActivityMainBinding
@@ -56,7 +58,9 @@ class MainActivity : AppCompatActivity(), MainActivityContractMVVM.View {
     }
 
     private fun loadUserDataInAdapter(users: MutableList<UserEntity>) {
-
+        binding.rvUserList.setHasFixedSize(true)
+        binding.rvUserList.layoutManager = LinearLayoutManager(this)
+        binding.rvUserList.adapter = UserAdapter(this, users)
     }
 
     override fun loadData() {
