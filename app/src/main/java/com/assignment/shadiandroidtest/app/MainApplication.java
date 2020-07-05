@@ -8,9 +8,11 @@ import com.assignment.shadiandroidtest.BuildConfig;
 import com.assignment.shadiandroidtest.entities.user.MyObjectBox;
 import com.assignment.shadiandroidtest.services.MainService;
 
+import dagger.hilt.android.HiltAndroidApp;
 import io.objectbox.BoxStore;
 import io.objectbox.android.AndroidObjectBrowser;
 
+@HiltAndroidApp
 public class MainApplication extends Application {
 
     private static Context appContext;

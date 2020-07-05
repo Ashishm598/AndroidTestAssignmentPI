@@ -12,8 +12,9 @@ import io.reactivex.Observer
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import retrofit2.Response
+import javax.inject.Inject
 
-class MainActivityPresenter(
+class MainActivityPresenter @Inject constructor(
     private val view: MainActivityContractMVP.View,
     private val model: MainActivityContractMVP.Model,
     private val networkUtil: NetworkUtil,

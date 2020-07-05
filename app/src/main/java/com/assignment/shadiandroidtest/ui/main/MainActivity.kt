@@ -2,6 +2,7 @@ package com.assignment.shadiandroidtest.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.ServiceWorkerWebSettings
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.TorrMonk.extension.log
 import com.TorrMonk.extension.setVisibility
@@ -21,6 +22,7 @@ import com.assignment.shadiandroidtest.ui.main.core.MainActivityModel
 import com.assignment.shadiandroidtest.ui.main.core.MainActivityPresenter
 import com.assignment.shadiandroidtest.utils.NetworkUtil
 import com.assignment.shadiandroidtest.utils.SweetDialogUtil
+import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -28,26 +30,21 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Response
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), MainActivityContractMVP.View {
 
     private lateinit var binding: ActivityMainBinding
     private var userAdapter: UserAdapter? = null
-    private lateinit var presenter: MainActivityPresenter
+
+    @Inject
+    lateinit var presenter: MainActivityPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        injectDependency()
-
-        val networkUtil = NetworkUtil(this)
-        val sweetDialogUtil = SweetDialogUtil(this)
-        val mainService = MainApplication.getMainService()
-        val userEntityInteractor = UserEntityInteractor()
-
-        val model = MainActivityModel(userEntityInteractor, mainService)
-        presenter = MainActivityPresenter(this, model, networkUtil, sweetDialogUtil)
 
         presenter.loadUserData()
 
@@ -61,10 +58,6 @@ class MainActivity : AppCompatActivity(), MainActivityContractMVP.View {
     }
 
     override fun initView() {
-
-    }
-
-    override fun injectDependency() {
 
     }
 

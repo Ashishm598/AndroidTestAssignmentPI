@@ -10,8 +10,9 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Response
+import javax.inject.Inject
 
-class MainActivityModel(
+class MainActivityModel @Inject constructor(
     private val userEntityInteractor: UserEntityInteractorI,
     private val mainService: MainService
 ) : MainActivityContractMVP.Model {
